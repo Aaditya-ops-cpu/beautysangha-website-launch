@@ -49,7 +49,8 @@ const Index = () => {
                 autoPlay 
                 muted 
                 loop 
-                className="w-full h-24 object-cover rounded-lg"
+                className="w-full max-w-4xl h-64 object-cover rounded-lg shadow-lg"
+                controls
               />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
