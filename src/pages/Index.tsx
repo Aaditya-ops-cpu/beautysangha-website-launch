@@ -3,13 +3,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Users, GraduationCap, Leaf, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoImage from "@/assets/logo.jpg";
+import logoImage from "@/assets/logo.png";
+import heroVideo from "@/assets/hero-video.mp4";
 
 const Index = () => {
   const partnerOrganizations = [
     { name: "The Kidverse", url: "https://thekidverse.org/" },
     { name: "CMSTS", url: "https://cmsts.in/" },
-    { name: "Connect For", url: "https://connectfor.org/home" }
+    { name: "Connect For", url: "https://connectfor.org/home" },
+    { name: "We The Change India", url: "https://www.wethechangeindia.org/" }
   ];
 
   const features = [
@@ -42,7 +44,13 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex justify-center mb-8">
-              <img src={logoImage} alt="Beauty Sangha Logo" className="h-32 w-auto" />
+              <video 
+                src={heroVideo} 
+                autoPlay 
+                muted 
+                loop 
+                className="w-full h-24 object-cover rounded-lg"
+              />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -143,7 +151,7 @@ const Index = () => {
               Collaborating with organizations to amplify our impact
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {partnerOrganizations.map((partner, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-all duration-300">
                 <CardContent className="pt-8 pb-6">
@@ -156,6 +164,46 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Preview */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Gallery
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Glimpses of our community development work and activities
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-6 text-center">
+                <div className="bg-muted/50 h-48 rounded-lg mb-4 flex items-center justify-center">
+                  <span className="text-muted-foreground">Photo Gallery</span>
+                </div>
+                <p className="text-sm text-muted-foreground">Community events and activities</p>
+              </CardContent>
+            </Card>
+            <Card className="hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-6 text-center">
+                <div className="bg-muted/50 h-48 rounded-lg mb-4 flex items-center justify-center">
+                  <span className="text-muted-foreground">Video Gallery</span>
+                </div>
+                <p className="text-sm text-muted-foreground">Documentary and event videos</p>
+              </CardContent>
+            </Card>
+            <Card className="hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-6 text-center">
+                <div className="bg-muted/50 h-48 rounded-lg mb-4 flex items-center justify-center">
+                  <span className="text-muted-foreground">Awards Gallery</span>
+                </div>
+                <p className="text-sm text-muted-foreground">Recognition and achievements</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

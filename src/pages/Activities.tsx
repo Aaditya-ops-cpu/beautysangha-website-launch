@@ -1,6 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, Heart, Users, Leaf, Shield, HandHeart } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { GraduationCap, Heart, Users, Leaf, Shield, HandHeart, Camera, Video } from "lucide-react";
 
 const Activities = () => {
   const activities = [
@@ -176,6 +177,52 @@ const Activities = () => {
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Programs Conducted</h3>
                 <p className="text-sm text-muted-foreground">Across different sectors</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Media Gallery Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Media Gallery
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Documenting our journey through photos and videos
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full text-white mb-6">
+                  <Camera className="h-10 w-10" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Photo Gallery</h3>
+                <p className="text-muted-foreground mb-6">
+                  Browse through our collection of photos showcasing community events, training programs, and social activities.
+                </p>
+                <Button className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all">
+                  View Photos
+                </Button>
+              </CardContent>
+            </Card>
+            
+            <Card className="hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full text-white mb-6">
+                  <Video className="h-10 w-10" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Video Gallery</h3>
+                <p className="text-muted-foreground mb-6">
+                  Watch documentaries, event highlights, and testimonials from our community development work.
+                </p>
+                <Button className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all">
+                  Watch Videos
+                </Button>
               </CardContent>
             </Card>
           </div>
