@@ -1,4 +1,4 @@
-import { Layout } from "@/components/Layout";
+import { HomeLayout } from "@/components/HomeLayout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Users, GraduationCap, Leaf, ArrowRight } from "lucide-react";
@@ -41,7 +41,7 @@ const Index = () => {
   ];
 
   return (
-    <Layout>
+    <HomeLayout>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/10 via-background to-secondary/10 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,7 +51,7 @@ const Index = () => {
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Brajaballavpur Beauty Sangha
+                Beauty Sangha Brajaballavpur
               </span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -272,8 +272,67 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Gallery Preview */}
+      {/* Latest Updates Section */}
       <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Latest Updates
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+            <p className="text-lg text-muted-foreground">
+              Stay updated with our recent activities and community initiatives
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div className="h-48 bg-muted/50 flex items-center justify-center">
+                <span className="text-muted-foreground">Update Image</span>
+              </div>
+              <CardContent className="p-6">
+                <div className="text-sm text-primary mb-2">June, 26 2025</div>
+                <h3 className="text-xl font-semibold mb-3">Beauty Sangha Foundation's first centralised kitchen in Bihar</h3>
+                <p className="text-muted-foreground mb-4">Support education for underprivileged children</p>
+                <Link to="#" className="text-primary hover:underline text-sm font-medium">
+                  Read More
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div className="h-48 bg-muted/50 flex items-center justify-center">
+                <span className="text-muted-foreground">Update Image</span>
+              </div>
+              <CardContent className="p-6">
+                <div className="text-sm text-primary mb-2">June, 19 2025</div>
+                <h3 className="text-xl font-semibold mb-3">Beauty Sangha and Team Unite for 'Music for Meals' Charity Concert in Bengaluru</h3>
+                <p className="text-muted-foreground mb-4">Provide healthcare facilities to rural communities</p>
+                <Link to="#" className="text-primary hover:underline text-sm font-medium">
+                  Read More
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div className="h-48 bg-muted/50 flex items-center justify-center">
+                <span className="text-muted-foreground">Update Image</span>
+              </div>
+              <CardContent className="p-6">
+                <div className="text-sm text-primary mb-2">June, 17 2025</div>
+                <h3 className="text-xl font-semibold mb-3">Golf for Good Charity Tournament Raises Funds to Feed 1,400 Children</h3>
+                <p className="text-muted-foreground mb-4">Skill development and training for women</p>
+                <Link to="#" className="text-primary hover:underline text-sm font-medium">
+                  Read More
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Preview */}
+      <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -331,7 +390,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </HomeLayout>
   );
 };
 

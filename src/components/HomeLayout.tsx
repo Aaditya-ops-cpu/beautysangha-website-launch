@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { useState } from "react";
 import logoImage from "@/assets/logo.png";
+import d2Image from "@/assets/d2.jpg";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -109,6 +110,38 @@ const Navigation = () => {
   );
 };
 
+const BeautySanghaFooter = () => {
+  return (
+    <footer className="bg-gray-100">
+      {/* Beauty Sangha Info Section */}
+      <div className="py-8 border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-6">
+            <p className="text-sm text-muted-foreground">Terms & Conditions</p>
+          </div>
+          <div className="flex justify-center items-center space-x-8 text-sm text-muted-foreground">
+            <div>
+              <span>Charity Id : AANAB3417A</span>
+            </div>
+            <div>
+              <span>The Beauty Sangha Foundation © 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* D2 Image Section */}
+      <div className="relative">
+        <img 
+          src={d2Image} 
+          alt="Beauty Sangha Community Silhouettes" 
+          className="w-full h-auto"
+        />
+      </div>
+    </footer>
+  );
+};
+
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-primary to-secondary text-white">
@@ -162,15 +195,16 @@ const Footer = () => {
           <p>&copy; 2024 Brajaballavpur Beauty Sangha. All rights reserved.</p>
         </div>
       </div>
+      <BeautySanghaFooter />
     </footer>
   );
 };
 
-interface LayoutProps {
+interface HomeLayoutProps {
   children: React.ReactNode;
 }
 
-export const Layout = ({ children }: LayoutProps) => {
+export const HomeLayout = ({ children }: HomeLayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />

@@ -136,6 +136,35 @@ const Team = () => {
         </div>
       </section>
 
+      {/* Advisory Team Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Advisory Team
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Experienced advisors guiding our organization towards excellence
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {advisoryTeam.map((advisor, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300">
+                <CardContent className="pt-8 pb-6">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full text-white mb-4">
+                    <Crown className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{advisor.name}</h3>
+                  <p className="text-lg text-primary font-semibold mb-4">{advisor.position}</p>
+                  <p className="text-sm text-muted-foreground">{advisor.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Main Wing Section */}
       <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -229,34 +258,6 @@ const Team = () => {
         </div>
       </section>
 
-      {/* Advisory Team Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Advisory Team
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Experienced advisors guiding our organization towards excellence
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {advisoryTeam.map((advisor, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300">
-                <CardContent className="pt-8 pb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full text-white mb-4">
-                    <Crown className="h-8 w-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{advisor.name}</h3>
-                  <p className="text-lg text-primary font-semibold mb-4">{advisor.position}</p>
-                  <p className="text-sm text-muted-foreground">{advisor.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Organization Structure */}
       <section className="py-20">
