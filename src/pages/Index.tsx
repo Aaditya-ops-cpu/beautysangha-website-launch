@@ -5,13 +5,17 @@ import { Heart, Users, GraduationCap, Leaf, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import logoImage from "@/assets/logo.png";
 import heroVideo from "@/assets/hero-video.mp4";
+import kidverseLogo from "@/assets/partners/kidverse-logo.png";
+import cmstsLogo from "@/assets/partners/cmsts-logo.png";
+import connectforLogo from "@/assets/partners/connectfor-logo.png";
+import wethechangeLogo from "@/assets/partners/wethechange-logo.jpg";
 
 const Index = () => {
   const partnerOrganizations = [
-    { name: "The Kidverse", url: "https://thekidverse.org/" },
-    { name: "CMSTS", url: "https://cmsts.in/" },
-    { name: "Connect For", url: "https://connectfor.org/home" },
-    { name: "We The Change India", url: "https://www.wethechangeindia.org/" }
+    { name: "The Kidverse", url: "https://thekidverse.org/", logo: kidverseLogo },
+    { name: "CMSTS", url: "https://cmsts.in/", logo: cmstsLogo },
+    { name: "Connect For", url: "https://connectfor.org/home", logo: connectforLogo },
+    { name: "We The Change India", url: "https://www.wethechangeindia.org/", logo: wethechangeLogo }
   ];
 
   const features = [
@@ -156,6 +160,13 @@ const Index = () => {
             {partnerOrganizations.map((partner, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-all duration-300">
                 <CardContent className="pt-8 pb-6">
+                  <div className="flex justify-center mb-4">
+                    <img 
+                      src={partner.logo} 
+                      alt={`${partner.name} logo`}
+                      className="h-16 w-auto object-contain"
+                    />
+                  </div>
                   <h3 className="text-xl font-semibold mb-4">{partner.name}</h3>
                   <Button variant="outline" asChild>
                     <a href={partner.url} target="_blank" rel="noopener noreferrer">
@@ -222,7 +233,7 @@ const Index = () => {
             <Button size="lg" variant="secondary" asChild>
               <Link to="/contact">Contact Us</Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary" asChild>
+            <Button size="lg" variant="outline" className="border-white text-black bg-white hover:bg-gray-100" asChild>
               <Link to="/activities">View Our Work</Link>
             </Button>
           </div>
