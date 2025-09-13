@@ -3,8 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Users, GraduationCap, Leaf, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoImage from "@/assets/logo.png";
-import heroVideo from "@/assets/hero-video.mp4";
+import ImageCarousel from "@/components/ImageCarousel";
 import kidverseLogo from "@/assets/partners/kidverse-logo.png";
 import cmstsLogo from "@/assets/partners/cmsts-logo.png";
 import connectforLogo from "@/assets/partners/connectfor-logo.png";
@@ -47,21 +46,13 @@ const Index = () => {
       <section className="relative bg-gradient-to-br from-primary/10 via-background to-secondary/10 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="flex justify-center mb-8">
-              <video 
-                src={heroVideo} 
-                autoPlay 
-                muted 
-                loop 
-                className="w-full max-w-4xl h-64 object-cover rounded-lg shadow-lg"
-                controls
-              />
+            <div className="mb-8">
+              <ImageCarousel />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Brajaballavpur
+                Brajaballavpur Beauty Sangha
               </span>
-              <br />Beauty Sangha
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Empowering communities through education, healthcare, and social development for over two decades. 
@@ -78,6 +69,107 @@ const Index = () => {
                 <Link to="/contact">Get Involved</Link>
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Campaigns Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Campaigns
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+            <p className="text-lg text-muted-foreground">
+              Support our ongoing initiatives and make a lasting impact
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div className="h-48 bg-muted/50 flex items-center justify-center">
+                <span className="text-muted-foreground">Campaign Image</span>
+              </div>
+              <CardContent className="p-6">
+                <div className="mb-4">
+                  <div className="w-full bg-muted rounded-full h-2">
+                    <div className="bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full" style={{ width: '30%' }}></div>
+                  </div>
+                  <div className="flex justify-between text-sm text-muted-foreground mt-2">
+                    <span>30%</span>
+                  </div>
+                </div>
+                
+                <div className="mb-4">
+                  <p className="text-sm text-muted-foreground">Raised: ₹150,000</p>
+                  <p className="text-sm text-muted-foreground">Goal: ₹500,000</p>
+                </div>
+
+                <h3 className="text-xl font-semibold mb-3">Education Support Program</h3>
+                <p className="text-muted-foreground mb-4">Support education for underprivileged children</p>
+                
+                <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                  DONATE NOW
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div className="h-48 bg-muted/50 flex items-center justify-center">
+                <span className="text-muted-foreground">Campaign Image</span>
+              </div>
+              <CardContent className="p-6">
+                <div className="mb-4">
+                  <div className="w-full bg-muted rounded-full h-2">
+                    <div className="bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full" style={{ width: '46%' }}></div>
+                  </div>
+                  <div className="flex justify-between text-sm text-muted-foreground mt-2">
+                    <span>46%</span>
+                  </div>
+                </div>
+                
+                <div className="mb-4">
+                  <p className="text-sm text-muted-foreground">Raised: ₹275,000</p>
+                  <p className="text-sm text-muted-foreground">Goal: ₹600,000</p>
+                </div>
+
+                <h3 className="text-xl font-semibold mb-3">Healthcare Initiative</h3>
+                <p className="text-muted-foreground mb-4">Provide healthcare facilities to rural communities</p>
+                
+                <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                  DONATE NOW
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div className="h-48 bg-muted/50 flex items-center justify-center">
+                <span className="text-muted-foreground">Campaign Image</span>
+              </div>
+              <CardContent className="p-6">
+                <div className="mb-4">
+                  <div className="w-full bg-muted rounded-full h-2">
+                    <div className="bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full" style={{ width: '80%' }}></div>
+                  </div>
+                  <div className="flex justify-between text-sm text-muted-foreground mt-2">
+                    <span>80%</span>
+                  </div>
+                </div>
+                
+                <div className="mb-4">
+                  <p className="text-sm text-muted-foreground">Raised: ₹320,000</p>
+                  <p className="text-sm text-muted-foreground">Goal: ₹400,000</p>
+                </div>
+
+                <h3 className="text-xl font-semibold mb-3">Women Empowerment Program</h3>
+                <p className="text-muted-foreground mb-4">Skill development and training for women</p>
+                
+                <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                  DONATE NOW
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

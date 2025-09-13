@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Youtube, Facebook, Linkedin, Instagram, Globe } from "lucide-react";
 import qrCodeImage from "@/assets/qr-code.jpg";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -212,8 +212,103 @@ const Contact = () => {
                     </div>
                   </CardContent>
                 </Card>
+
+                {/* Social Media Links */}
+                <Card>
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div className="grid grid-cols-2 gap-4">
+                      <a 
+                        href="https://youtube.com/@beautysangha7818?si=a8vHQlLvvhVqQCed" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-3 text-muted-foreground hover:text-red-600 transition-colors"
+                      >
+                        <Youtube className="h-5 w-5" />
+                        <span>YouTube</span>
+                      </a>
+                      
+                      <a 
+                        href="http://facebook.com/Beautysangha2001?mibextid=ZbWKwL" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-3 text-muted-foreground hover:text-blue-600 transition-colors"
+                      >
+                        <Facebook className="h-5 w-5" />
+                        <span>Facebook</span>
+                      </a>
+                      
+                      <a 
+                        href="https://www.linkedin.com/in/beauty-sangha-ngo-44553636a" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-3 text-muted-foreground hover:text-blue-700 transition-colors"
+                      >
+                        <Linkedin className="h-5 w-5" />
+                        <span>LinkedIn</span>
+                      </a>
+                      
+                      <a 
+                        href="https://www.instagram.com/beautysangha?igsh=MWl3ZXY0cG54eHFocw==" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-3 text-muted-foreground hover:text-pink-600 transition-colors"
+                      >
+                        <Instagram className="h-5 w-5" />
+                        <span>Instagram</span>
+                      </a>
+                      
+                      <a 
+                        href="https://www.threads.com/@beautysangha" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-3 text-muted-foreground hover:text-gray-800 transition-colors"
+                      >
+                        <Globe className="h-5 w-5" />
+                        <span>Threads</span>
+                      </a>
+                      
+                      <a 
+                        href="https://share.google/fPjVdJI5RqHO4V8ZS" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-3 text-muted-foreground hover:text-blue-500 transition-colors"
+                      >
+                        <Globe className="h-5 w-5" />
+                        <span>Google</span>
+                      </a>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Location
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Visit us at our office in Brajaballavpur
+            </p>
+          </div>
+          
+          <div className="rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3695.123456789!2d87.98765432!3d22.12345678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBrajaballavpur%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Beauty Sangha Location"
+            ></iframe>
           </div>
         </div>
       </section>
