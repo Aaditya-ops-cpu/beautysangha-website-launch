@@ -43,7 +43,7 @@ const Index = () => {
   return (
     <HomeLayout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary/10 via-background to-secondary/10 py-8 md:py-20">
+      <section className="relative bg-gradient-to-br from-primary/10 via-background to-secondary/10 py-0 md:py-8 lg:py-12">
         <div className="w-full">
           <div className="mb-8">
             <ImageCarousel />
@@ -390,6 +390,21 @@ const Index = () => {
               <Link to="/activities">View Our Work</Link>
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Donate Section */}
+      <section className="py-12 bg-gradient-to-r from-primary to-secondary text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            Support Our Cause
+          </h2>
+          <p className="text-lg mb-6 opacity-90">
+            Your donation helps us continue our mission of community development
+          </p>
+          <Button size="lg" variant="secondary" asChild>
+            <Link to="/donate">Donate Now</Link>
+          </Button>
         </div>
       </section>
     </HomeLayout>

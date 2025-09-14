@@ -25,11 +25,8 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center">
             <img src={logoImage} alt="Beauty Sangha Logo" className="h-12 w-auto" />
-            <div className="text-lg font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Beauty Sangha
-            </div>
           </Link>
 
           {/* Contact Info - Desktop */}
@@ -59,16 +56,10 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button size="sm" className="ml-2 bg-gradient-to-r from-primary to-secondary text-white text-xs xl:text-sm" asChild>
-              <Link to="/donate">Donate Now</Link>
-            </Button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center space-x-2">
-            <Button size="sm" className="bg-gradient-to-r from-primary to-secondary text-white text-xs" asChild>
-              <Link to="/donate">Donate</Link>
-            </Button>
+          <div className="lg:hidden">
             <Button
               variant="ghost"
               size="sm"
@@ -181,6 +172,22 @@ export const Layout = ({ children }: LayoutProps) => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       <main className="flex-1">{children}</main>
+      
+      {/* Donate Section */}
+      <section className="py-12 bg-gradient-to-r from-primary to-secondary text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            Support Our Cause
+          </h2>
+          <p className="text-lg mb-6 opacity-90">
+            Your donation helps us continue our mission of community development
+          </p>
+          <Button size="lg" variant="secondary" asChild>
+            <Link to="/donate">Donate Now</Link>
+          </Button>
+        </div>
+      </section>
+      
       <Footer />
     </div>
   );
