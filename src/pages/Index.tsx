@@ -43,13 +43,11 @@ const Index = () => {
   return (
     <HomeLayout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary/10 via-background to-secondary/10 py-0 md:py-8 lg:py-12">
+      <section className="relative bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="w-full">
-          <div className="mb-8">
-            <ImageCarousel />
-          </div>
+          <ImageCarousel />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
           <div className="text-center mb-16">
             <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-foreground mb-6">
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
