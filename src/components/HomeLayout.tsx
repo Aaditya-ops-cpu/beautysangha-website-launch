@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { useState } from "react";
 import logoImage from "@/assets/logo.png";
-import d2Image from "@/assets/d2.jpg";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,12 +45,12 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-2 xl:space-x-4">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                className={`px-2 py-2 rounded-md text-xs xl:text-sm font-medium transition-all duration-200 ${
                   location.pathname === item.path
                     ? "bg-gradient-to-r from-primary to-secondary text-white shadow-md"
                     : "text-foreground hover:text-primary hover:bg-muted"
@@ -60,10 +59,16 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+            <Button size="sm" className="ml-2 bg-gradient-to-r from-primary to-secondary text-white text-xs xl:text-sm" asChild>
+              <Link to="/donate">Donate Now</Link>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden flex items-center space-x-2">
+            <Button size="sm" className="bg-gradient-to-r from-primary to-secondary text-white text-xs" asChild>
+              <Link to="/donate">Donate</Link>
+            </Button>
             <Button
               variant="ghost"
               size="sm"
@@ -76,7 +81,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-muted rounded-lg mt-2">
               {navItems.map((item) => (
                 <Link
@@ -110,33 +115,37 @@ const Navigation = () => {
   );
 };
 
+import footerImage from "@/assets/footer.jpg";
+
 const BeautySanghaFooter = () => {
   return (
-    <footer className="bg-gray-100">
-      {/* Beauty Sangha Info Section */}
-      <div className="py-8 border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-6">
-            <p className="text-sm text-muted-foreground">Terms & Conditions</p>
-          </div>
-          <div className="flex justify-center items-center space-x-8 text-sm text-muted-foreground">
-            <div>
-              <span>Charity Id : AANAB3417A</span>
-            </div>
-            <div>
-              <span>The Beauty Sangha Foundation © 2025</span>
+    <footer className="relative">
+      {/* Footer Background Image */}
+      <div className="relative">
+        <img 
+          src={footerImage} 
+          alt="Beauty Sangha Footer Background" 
+          className="w-full h-auto"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+          <div className="w-full py-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center text-white">
+                <div className="mb-4">
+                  <p className="text-sm opacity-90">Terms & Conditions</p>
+                </div>
+                <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-8 text-sm">
+                  <div>
+                    <span>Charity Id : AANAB3417A</span>
+                  </div>
+                  <div>
+                    <span>The Beauty Sangha Foundation © 2025</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      
-      {/* D2 Image Section */}
-      <div className="relative">
-        <img 
-          src={d2Image} 
-          alt="Beauty Sangha Community Silhouettes" 
-          className="w-full h-auto"
-        />
       </div>
     </footer>
   );

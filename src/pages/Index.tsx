@@ -43,22 +43,24 @@ const Index = () => {
   return (
     <HomeLayout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary/10 via-background to-secondary/10 py-20">
+      <section className="relative bg-gradient-to-br from-primary/10 via-background to-secondary/10 py-8 md:py-20">
+        <div className="w-full">
+          <div className="mb-8">
+            <ImageCarousel />
+          </div>
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="mb-8">
-              <ImageCarousel />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-foreground mb-6">
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Beauty Sangha Brajaballavpur
               </span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            <p className="text-sm md:text-lg lg:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto px-4">
               Empowering communities through education, healthcare, and social development for over two decades. 
               Creating an inclusive and sustainable society where every individual has access to equal opportunities.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
               <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all">
                 <Link to="/about" className="flex items-center space-x-2">
                   <span>Learn More</span>
@@ -86,7 +88,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="overflow-hidden hover:shadow-lg transition-all duration-300">
               <div className="h-48 bg-muted/50 flex items-center justify-center">
                 <span className="text-muted-foreground">Campaign Image</span>
@@ -185,17 +187,17 @@ const Index = () => {
               We focus on key areas that create lasting impact in rural communities
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 group">
-                <CardContent className="pt-8 pb-6">
+                <CardContent className="pt-6 pb-6">
                   <div className="flex justify-center mb-4">
                     <div className="p-3 rounded-full bg-gradient-to-r from-primary to-secondary text-white group-hover:scale-110 transition-transform">
                       {feature.icon}
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
+                  <h3 className="text-lg lg:text-xl font-semibold mb-3">{feature.title}</h3>
+                  <p className="text-sm lg:text-base text-muted-foreground">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -214,23 +216,23 @@ const Index = () => {
               Officially recognized and certified for transparent operations
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             <Card className="text-center">
-              <CardContent className="pt-8 pb-6">
-                <h3 className="text-lg font-semibold mb-2">Registration</h3>
-                <p className="text-sm text-muted-foreground">S0050599 (WBSR Act, 1961)</p>
+              <CardContent className="pt-6 pb-6">
+                <h3 className="text-base lg:text-lg font-semibold mb-2">Registration</h3>
+                <p className="text-xs lg:text-sm text-muted-foreground">S0050599 (WBSR Act, 1961)</p>
               </CardContent>
             </Card>
             <Card className="text-center">
-              <CardContent className="pt-8 pb-6">
-                <h3 className="text-lg font-semibold mb-2">NGO Darpan</h3>
-                <p className="text-sm text-muted-foreground">WB/2025/0645255</p>
+              <CardContent className="pt-6 pb-6">
+                <h3 className="text-base lg:text-lg font-semibold mb-2">NGO Darpan</h3>
+                <p className="text-xs lg:text-sm text-muted-foreground">WB/2025/0645255</p>
               </CardContent>
             </Card>
             <Card className="text-center">
-              <CardContent className="pt-8 pb-6">
-                <h3 className="text-lg font-semibold mb-2">PAN Number</h3>
-                <p className="text-sm text-muted-foreground">AANAB3417A</p>
+              <CardContent className="pt-6 pb-6">
+                <h3 className="text-base lg:text-lg font-semibold mb-2">PAN Number</h3>
+                <p className="text-xs lg:text-sm text-muted-foreground">AANAB3417A</p>
               </CardContent>
             </Card>
           </div>
